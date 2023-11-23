@@ -4,11 +4,7 @@ export default function App() {
       <nav className='nav'>
         <div className='nav-center'>
           <div className='nav-header'>
-            <img
-              src='/static/media/logo.6ad422bb585e8c12e29343696a1349aa.svg'
-              className='nav-logo'
-              alt=''
-            />
+            <img src='./images/logo.svg' className='nav-logo' alt='' />
             <button className='btn toggle-btn'>
               <svg
                 stroke='currentColor'
@@ -212,11 +208,7 @@ export default function App() {
             <button className='btn'>Start now</button>
           </article>
           <article className='hero-images'>
-            <img
-              src='/static/media/phone.94a7a4fe1f82aed65bc22c10a1c6d6ef.svg'
-              className='phone-img'
-              alt='phone'
-            />
+            <img src='./images/phone.svg' className='phone-img' alt='phone' />
           </article>
         </div>
       </section>
