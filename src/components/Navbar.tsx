@@ -19,8 +19,8 @@ export default function Navbar() {
           <li>
             <button
               className='link-btn'
-              onMouseEnter={() => dispatch(showSubmenu())}
-              onMouseLeave={() => dispatch(hideSubmenu())}
+              onMouseEnter={() => dispatch(showSubmenu(0))}
+              onMouseLeave={() => dispatch(hideSubmenu(0))}
             >
               products
             </button>

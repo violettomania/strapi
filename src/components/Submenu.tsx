@@ -4,14 +4,17 @@ import subLinks from '../data';
 import SubmenuItem from './SubmenuItem';
 
 export default function Submenu() {
-  const isSubmenuShown = useAppSelector((state) => state.submenu.value);
+  const selectedSubmenuIndex = useAppSelector(
+    (state) => state.submenu.selectedIndex
+  );
 
   return (
     <aside
-      className={`submenu ${isSubmenuShown && 'show'}`}
+      className={`submenu ${selectedSubmenuIndex && 'show'}`}
       style={{ left: '337.539px', top: '61.5px' }}
     >
       <section>
+        {subLinks[selectedSubmenuIndex].page}
         {subLinks.map((item) => (
           <SubmenuItem key={item.page} {...item} />
         ))}
