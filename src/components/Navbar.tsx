@@ -1,7 +1,7 @@
 import logo from '../images/logo.svg';
 import { FaBars } from 'react-icons/fa';
 import { useAppDispatch } from '../hooks/hooks';
-import { showSubmenu } from '../slices/submenuSlice';
+import { showSubmenu, hideSubmenu } from '../slices/submenuSlice';
 
 export default function Navbar() {
   const dispatch = useAppDispatch();
@@ -16,7 +16,10 @@ export default function Navbar() {
           </button>
         </div>
         <ul className='nav-links'>
-          <li onMouseEnter={() => dispatch(showSubmenu())}>
+          <li
+            onMouseEnter={() => dispatch(showSubmenu())}
+            onMouseLeave={() => dispatch(hideSubmenu())}
+          >
             <button className='link-btn'>products</button>
           </li>
           <li>
