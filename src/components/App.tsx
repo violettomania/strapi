@@ -1,7 +1,7 @@
-import subLinks from '../data';
 import { Hero } from './Hero';
 import { Navbar } from './Navbar';
 import { Sidebar } from './Sidebar';
+import Submenu from './Submenu';
 
 export default function App() {
   return (
@@ -9,29 +9,7 @@ export default function App() {
       <Navbar />
       <Sidebar />
       <Hero />
-      <aside className='submenu' style={{ left: '337.539px', top: '61.5px' }}>
-        <section>
-          {subLinks.map((item, index) => {
-            const { links, page } = item;
-            return (
-              <div key={index}>
-                <h4>{page}</h4>
-                <div className='sidebar-sublinks'>
-                  {links.map((link, index) => {
-                    const { url, icon, label } = link;
-                    return (
-                      <a href={url} key={index}>
-                        {icon}
-                        {label}
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </section>
-      </aside>
+      <Submenu />
     </>
   );
 }
