@@ -1,7 +1,7 @@
 import logo from '../images/logo.svg';
 import { FaBars } from 'react-icons/fa';
 
-export function Navbar() {
+export default function Navbar() {
   return (
     <nav className='nav'>
       <div className='nav-center'>

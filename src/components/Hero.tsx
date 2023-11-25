@@ -1,6 +1,6 @@
 import phoneImg from '../images/phone.svg';
 
-export function Hero() {
+export default function Hero() {
   return (
     <section className='hero'>
       <div className='hero-center'>

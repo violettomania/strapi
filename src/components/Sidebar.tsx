@@ -1,7 +1,7 @@
 import subLinks from '../data';
 import { FaTimes } from 'react-icons/fa';
 
-export function Sidebar() {
+export default function Sidebar() {
   return (
     <div className='sidebar-wrapper'>
       <aside className='sidebar'>
