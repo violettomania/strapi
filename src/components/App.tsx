@@ -1,42 +1,13 @@
 import phoneImg from '../images/phone.svg';
 import subLinks from '../data';
-import { FaTimes } from 'react-icons/fa';
 import { Navbar } from './Navbar';
+import { Sidebar } from './Sidebar';
 
 export default function App() {
   return (
     <>
       <Navbar />
-      <div className='sidebar-wrapper'>
-        <aside className='sidebar'>
-          <button className='close-btn'>
-            <FaTimes />
-          </button>
-          <div className='sidebar-links'>
-            <article>
-              {subLinks.map((item, index) => {
-                const { links, page } = item;
-                return (
-                  <div key={index}>
-                    <h4>{page}</h4>
-                    <div className='sidebar-sublinks'>
-                      {links.map((link, index) => {
-                        const { url, icon, label } = link;
-                        return (
-                          <a href={url} key={index}>
-                            {icon}
-                            {label}
-                          </a>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
-            </article>
-          </div>
-        </aside>
-      </div>
+      <Sidebar />
       <section className='hero'>
         <div className='hero-center'>
           <article className='hero-info'>
