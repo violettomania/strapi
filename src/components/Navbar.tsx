@@ -16,11 +16,14 @@ export default function Navbar() {
           </button>
         </div>
         <ul className='nav-links'>
-          <li
-            onMouseEnter={() => dispatch(showSubmenu())}
-            onMouseLeave={() => dispatch(hideSubmenu())}
-          >
-            <button className='link-btn'>products</button>
+          <li>
+            <button
+              className='link-btn'
+              onMouseEnter={() => dispatch(showSubmenu())}
+              onMouseLeave={() => dispatch(hideSubmenu())}
+            >
+              products
+            </button>
           </li>
           <li>
             <button className='link-btn'>developers</button>
