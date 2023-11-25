@@ -1,33 +1,12 @@
-import logo from '../images/logo.svg';
 import phoneImg from '../images/phone.svg';
 import subLinks from '../data';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
+import { Navbar } from './Navbar';
 
 export default function App() {
   return (
     <>
-      <nav className='nav'>
-        <div className='nav-center'>
-          <div className='nav-header'>
-            <img src={logo} className='nav-logo' alt='' />
-            <button className='btn toggle-btn'>
-              <FaBars />
-            </button>
-          </div>
-          <ul className='nav-links'>
-            <li>
-              <button className='link-btn'>products</button>
-            </li>
-            <li>
-              <button className='link-btn'>developers</button>
-            </li>
-            <li>
-              <button className='link-btn'>company</button>
-            </li>
-          </ul>
-          <button className='btn signin-btn'>Sign in</button>
-        </div>
-      </nav>
+      <Navbar />
       <div className='sidebar-wrapper'>
         <aside className='sidebar'>
           <button className='close-btn'>
