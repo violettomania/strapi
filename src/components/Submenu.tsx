@@ -1,8 +1,15 @@
+import { useAppSelector } from '../hooks/hooks';
+
 import subLinks from '../data';
 
 export default function Submenu() {
+  const isSubmenuShown = useAppSelector((state) => state.submenu.value);
+
   return (
-    <aside className='submenu' style={{ left: '337.539px', top: '61.5px' }}>
+    <aside
+      className={`submenu ${isSubmenuShown && 'show'}`}
+      style={{ left: '337.539px', top: '61.5px' }}
+    >
       <section>
         {subLinks.map((item, index) => {
           const { links, page } = item;
