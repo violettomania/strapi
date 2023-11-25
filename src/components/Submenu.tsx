@@ -23,7 +23,10 @@ export default function Submenu() {
         {isSubmenuShown(selectedSubmenuIndex) && (
           <SubmenuItem
             key={subLinks[selectedSubmenuIndex].page}
-            {...subLinks[selectedSubmenuIndex]}
+            {...{
+              className: 'submenu-center col-4',
+              ...subLinks[selectedSubmenuIndex],
+            }}
           />
         )}
       </section>
