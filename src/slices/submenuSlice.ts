@@ -6,7 +6,7 @@ interface submenuState {
 }
 
 const initialState: submenuState = {
-  selectedIndex: 0,
+  selectedIndex: -1,
 };
 
 export const submenuSlice = createSlice({
@@ -16,8 +16,8 @@ export const submenuSlice = createSlice({
     showSubmenu: (state, action) => {
       state.selectedIndex = action.payload;
     },
-    hideSubmenu: (state, action) => {
-      state.selectedIndex = action.payload;
+    hideSubmenu: (state) => {
+      state.selectedIndex = -1;
     },
   },
 });

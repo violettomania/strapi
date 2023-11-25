@@ -9,9 +9,9 @@ interface SubmenuItemProps {
 
 export default function SubmenuItem({ links, page }: SubmenuItemProps) {
   return (
-    <div>
+    <>
       <h4>{page}</h4>
-      <div className='sidebar-sublinks'>
+      <div className='submenu-center col-4'>
         {links.map(({ url, icon, label }) => {
           return (
             <a href={url} key={label}>
@@ -21,6 +21,6 @@ export default function SubmenuItem({ links, page }: SubmenuItemProps) {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import logo from '../images/logo.svg';
+import subLinks from '../data';
 import { FaBars } from 'react-icons/fa';
 import { useAppDispatch } from '../hooks/hooks';
 import { showSubmenu, hideSubmenu } from '../slices/submenuSlice';
@@ -16,21 +17,17 @@ export default function Navbar() {
           </button>
         </div>
         <ul className='nav-links'>
-          <li>
-            <button
-              className='link-btn'
-              onMouseEnter={() => dispatch(showSubmenu(0))}
-              onMouseLeave={() => dispatch(hideSubmenu(0))}
-            >
-              products
-            </button>
-          </li>
-          <li>
-            <button className='link-btn'>developers</button>
-          </li>
-          <li>
-            <button className='link-btn'>company</button>
-          </li>
+          {subLinks.map(({ page }, index) => (
+            <li key={page}>
+              <button
+                className='link-btn'
+                onMouseEnter={() => dispatch(showSubmenu(index))}
+                onMouseLeave={() => dispatch(hideSubmenu())}
+              >
+                {page}
+              </button>
+            </li>
+          ))}
         </ul>
         <button className='btn signin-btn'>Sign in</button>
       </div>
