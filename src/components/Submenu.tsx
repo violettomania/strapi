@@ -10,7 +10,10 @@ export default function Submenu() {
   return (
     <aside
       className={`submenu ${selectedSubmenuIndex >= 0 && 'show'}`}
-      style={{ left: '337.539px', top: '61.5px' }}
+      style={{
+        left: 337.539 + selectedSubmenuIndex * 160,
+        top: 61.5,
+      }}
     >
       <section>
         {selectedSubmenuIndex >= 0 && (
