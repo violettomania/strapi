@@ -21,6 +21,7 @@ export default function Sidebar() {
                 key={item.page}
                 {...{
                   className: 'sidebar-sublinks',
+                  isMobileView: true,
                   ...item,
                 }}
               />

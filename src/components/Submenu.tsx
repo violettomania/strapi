@@ -24,7 +24,7 @@ export default function Submenu() {
           <SubmenuItem
             key={subLinks[selectedSubmenuIndex].page}
             {...{
-              className: 'submenu-center col-4',
+              className: 'submenu-center',
               ...subLinks[selectedSubmenuIndex],
             }}
           />
